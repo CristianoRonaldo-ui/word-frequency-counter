@@ -10,4 +10,14 @@ public class WordCounter {
     public int getUniqueWordCount() {
         return counts.size();
     }
+
+    public void addWord(String word) {
+        String key = word.toLowerCase();
+        int current = counts.getOrDefault(key, 0);
+        counts.put(key, current + 1);
+    }
+
+    public int getCount(String word) {
+        return counts.getOrDefault(word.toLowerCase(), 0);
+    }
 }
