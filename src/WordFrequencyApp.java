@@ -8,5 +8,6 @@ public class WordFrequencyApp {
         System.out.println("Count of 'is': " + counter.getCount("is"));
         System.out.println("Count of 'fun': " + counter.getCount("fun"));
         System.out.println("Unique words: " + counter.getUniqueWordCount());
+        System.out.println("Most frequent: " + counter.getMostFrequentWord());
     }
 }

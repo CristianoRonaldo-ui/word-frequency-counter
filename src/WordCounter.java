@@ -30,4 +30,19 @@ public class WordCounter {
             }
         }
     }
+
+    public String getMostFrequentWord() {
+        String bestWord = "";
+        int bestCount = 0;
+
+        for (String word : counts.keySet()) {
+            int count = counts.get(word);
+            if (count > bestCount) {
+                bestWord = word;
+                bestCount = count;
+            }
+        }
+
+        return bestWord;
+    }
 }
