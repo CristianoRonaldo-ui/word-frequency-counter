@@ -20,4 +20,14 @@ public class WordCounter {
     public int getCount(String word) {
         return counts.getOrDefault(word.toLowerCase(), 0);
     }
+
+    public void addText(String text) {
+        String[] words = text.split(" ");
+        for (String word : words) {
+            String cleaned = word.replaceAll("[^a-zA-Z]", "");
+            if (!cleaned.isEmpty()) {
+                addWord(cleaned);
+            }
+        }
+    }
 }
